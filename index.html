@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaxttô • Controle Financeiro Inteligente por Ciclos e Voz</title>
+  <meta name="description" content="O controle financeiro que respeita o ciclo dos seus cartões e a sua privacidade. 100% offline, sem cadastro e com comandos de voz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A0D11;
+      --card: #141A22;
+      --card-border: #1E2733;
+      --primary: #00BF63;
+      --primary-glow: rgba(0, 191, 99, 0.25);
+      --text: #F3F4F6;
+      --text-muted: #9CA3AF;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 24px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo-badge {
+      background: linear-gradient(135deg, #00BF63, #008F4A);
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 22px;
+      box-shadow: 0 4px 14px var(--primary-glow);
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      margin-left: 20px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .hero {
+      text-align: center;
+      padding: 70px 20px 40px;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+    .pill {
+      display: inline-block;
+      padding: 8px 18px;
+      background: rgba(0, 191, 99, 0.12);
+      border: 1px solid rgba(0, 191, 99, 0.3);
+      color: var(--primary);
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: 0.5px;
+    }
+    h1 {
+      font-size: 46px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      background: linear-gradient(180deg, #FFFFFF 0%, #B8C2CC 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 18px;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--primary);
+      color: #0A0D11;
+      padding: 16px 36px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 16px;
+      box-shadow: 0 8px 24px var(--primary-glow);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 191, 99, 0.4);
+    }
+    .features {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px 28px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card:hover {
+      border-color: rgba(0, 191, 99, 0.4);
+      transform: translateY(-4px);
+    }
+    .card-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #FFFFFF;
+    }
+    .card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 80px;
+    }
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    footer a:hover { color: var(--primary); }
+    @media (max-width: 600px) {
+      h1 { font-size: 34px; }
+      .hero p { font-size: 16px; }
+      .features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">
+      <div class="logo-badge">G</div>
+      <span>Gaxttô</span>
+    </a>
+    <div class="nav-links">
+      <a href="privacidade.html">Privacidade</a>
+      <a href="mailto:suporte.gaxtto@gmail.com">Suporte</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="pill">⚡ FINANÇAS NO RITMO DA SUA VIDA REAL</div>
+      <h1>Controle financeiro por ciclos de cartão e voz.</h1>
+      <p>Esqueça planilhas confusas e apps que pedem senhas bancárias. Organize seus gastos pela data de fechamento da sua fatura, com privacidade absoluta e 100% offline.</p>
+      <a href="https://play.google.com/apps/testing/com.gaxtou.app" class="cta-btn">
+        <span>Baixar na Google Play</span>
+        <span>→</span>
+      </a>
+    </section>
+
+    <section class="features">
+      <div class="card">
+        <div class="card-icon">🎤</div>
+        <h3>Lançamento Rápido por Voz</h3>
+        <p>Basta falar: "Almoço 35 no cartão" ou "PlayStation 1200 em 10x". O motor inteligente do Gaxttô reconhece o valor, a categoria e a carteira em 1 segundo.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">💳</div>
+        <h3>Ciclos de Fatura Reais</h3>
+        <p>Seu dinheiro segue a data de corte do seu cartão. Saiba seu limite disponível, ritmo de gasto diário recomendado e evite surpresas na fatura.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔒</div>
+        <h3>100% Privado e Offline</h3>
+        <p>Sem cadastro, sem CPF, sem e-mail e sem senhas. Seus dados financeiros pertencem apenas a você e nunca saem do seu celular.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">☁️</div>
+        <h3>Backup Seguro no Google Drive</h3>
+        <p>Trocou de aparelho? Sincronize seus dados com sua conta pessoal do Google Drive com um único clique de forma totalmente criptografada.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔁</div>
+        <h3>Fixos e Parcelamentos</h3>
+        <p>Controle despesas recorrentes mensais e compras parceladas com contagem automática de parcelas pagas e projeção em ciclos futuros.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Extratos e Gráficos Claros</h3>
+        <p>Entenda para onde vai cada centavo com visualizações limpas por categoria e exporte extratos completos em CSV para Excel.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Gaxttô • Todos os direitos reservados.</p>
+    <p style="margin-top: 10px;">
+      <a href="privacidade.html">Política de Privacidade</a> •
+      <a href="app-ads.txt">app-ads.txt</a> •
+      <a href="mailto:suporte.gaxtto@gmail.com">Contato e Suporte</a>
+    </p>
+  </footer>
+</body>
+</html>
